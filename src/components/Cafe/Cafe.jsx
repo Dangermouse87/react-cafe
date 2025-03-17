@@ -7,3 +7,14 @@
 // criteria: ["Power sockets", "Quiet"]
 
 import "./Cafe.css";
+
+
+const Cafe = () => {
+  return (
+    <div>
+      
+    </div>
+  );
+};
+
+export default Cafe;
