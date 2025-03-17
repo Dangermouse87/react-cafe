@@ -12,7 +12,6 @@ import SideBar from './components/Sidebar/Sidebar';
 const App = () => {
   return (
     <div className="app-frame">
-      Hello from the App!
       <Navbar />
         <div className="app-body">
           <SideBar />
