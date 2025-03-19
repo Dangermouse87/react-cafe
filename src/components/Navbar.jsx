@@ -2,7 +2,7 @@ import React from 'react';
 import logo from '../assets/logo.png'
 import SearchBar from "./Searchbar/Searchbar";
 
-function Navbar() {
+function Navbar( {setCafeData} ) {
   return (
     <div className="d-flex justify-content-between align-items-center w-100 py-2 px-4 bg-success-subtle">
       <div className="d-flex align-items-center">
@@ -10,7 +10,7 @@ function Navbar() {
         <h2>Matcha and keyboard</h2>
       </div>
       <div className="d-flex align-items-center gap-5">
-        <SearchBar />
+        <SearchBar setCafeData={setCafeData} />
         <div className="dropdown">
           <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
             <i className="fa-solid fa-bars"></i>
