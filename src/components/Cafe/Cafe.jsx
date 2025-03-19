@@ -1,18 +1,23 @@
 // Gmaps URL example: `https://www.google.com/maps/search/?api=1&query=Starbucks Meguro,Tokyo`;
 
-// /// Card example data ///
-// picture: "https://laptopfriendly.co/images/places/tokyo/ddsk-saigon-kitchen/ddsk-saigon-kitchen--tokyo.jpg",
-// title: "DDSK SAIGON KITCHEN",
-// address: "ss, 135-0061, Tokyo",
-// criteria: ["Power sockets", "Quiet"]
 
 import "./Cafe.css";
 
+// pass the cafe object as a prop to the Cafe component passed in the CafeList component
+const Cafe = ({cafe}) => {
 
-const Cafe = () => {
+  const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${cafe.title},${cafe.address}`;
+
   return (
-    <div>
-      
+    <div className="cafe-card">
+      <img src={cafe.picture} alt="cafe" />
+      <div>
+        <div>
+          <h5>{cafe.title}</h5>
+          <p>{cafe.criteria.join(", ")}</p>
+        </div>
+        <a href={googleMapsUrl} target="_blank" rel="noreferrer">View on Google Maps 🚩</a>    
+      </div>
     </div>
   );
 };
